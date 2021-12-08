@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">IoT Clock</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="publish">Test Publish</string>
+    <string name="display_mode">Display Mode:</string>
+    <string name="set_clock">Set Clock</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="custom_text">Text</string>
+    <string name="custom_text_prompt">Custom Text:</string>
+
+    <string-array name="display_mode_array">
+        <item>Ambient Temperature</item>
+        <item>Custom Message</item>
+        <item>Stocks</item>
+        <item>Forecast</item>
+    </string-array>
+
+    <string-array name="clock_set_array">
+        <item>Current Time</item>
+        <item>Custom Time</item>
+    </string-array>
+
+</resources>
