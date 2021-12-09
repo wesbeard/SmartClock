@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Wes/AndroidStudioProjects/IoTClock/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Wes/AndroidStudioProjects/IoTClock_Test/app/src/main/res/layout/activity_main.xml" value="0.3609375" />
         <entry key="..\:/Users/wesley.beard/AndroidStudioProjects/IoTClock/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/wesley.beard/AndroidStudioProjects/IoTClock/app/src/main/res/layout/fragment_time_picker.xml" value="0.36666666666666664" />

@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var client: MqttAndroidClient
     private lateinit var reconnect: Button
-    private lateinit var displaySpinner: Spinner
     private lateinit var clockSpinner: Spinner
     private lateinit var setClockButton: Button
     private lateinit var setAlarmButton: Button
+    private lateinit var setMessageButton: Button
+    private lateinit var messageEntry: EditText
 
     companion object {
         var customTime = false
@@ -41,16 +42,12 @@ class MainActivity : AppCompatActivity() {
             connect()
         }
 
-        displaySpinner = findViewById(R.id.display_spinner)
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.display_mode_array,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            displaySpinner.adapter = adapter
+        messageEntry = findViewById(R.id.custom_text_entry)
+
+        setMessageButton = findViewById(R.id.set_message_button)
+        setMessageButton.setOnClickListener {
+            publish("t/message", messageEntry.text.toString())
         }
-        displaySpinner.onItemSelectedListener = DisplaySpinner()
 
         clockSpinner = findViewById(R.id.clock_spinner)
         ArrayAdapter.createFromResource(
@@ -130,16 +127,6 @@ class MainActivity : AppCompatActivity() {
     class ClockSpinner: AdapterView.OnItemSelectedListener {
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             customTime = position != 0
-        }
-
-        override fun onNothingSelected(parent: AdapterView<*>?) {
-            // No action needs to be taken
-        }
-    }
-
-    class DisplaySpinner: AdapterView.OnItemSelectedListener {
-        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            // Toast.makeText(view?.context, "Display Item Selected", Toast.LENGTH_SHORT).show()
         }
 
         override fun onNothingSelected(parent: AdapterView<*>?) {

@@ -35,11 +35,6 @@
 
     </LinearLayout>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="0" />
-
     <Button
         android:id="@+id/set_alarm"
         android:layout_width="match_parent"
@@ -53,33 +48,16 @@
         android:layout_height="50dp"
         android:layout_weight="0" />
 
-    <LinearLayout
+    <View
+        android:id="@+id/divider2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
-        <TextView
-            android:id="@+id/display_mode_prompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/display_mode"
-            android:textSize="16sp" />
-
-        <Space
-            android:layout_width="20dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0" />
-
-        <Spinner
-            android:id="@+id/display_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/app_name"
-            android:dropDownWidth="match_parent"></Spinner>
-
-    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,10 +84,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text|textCapCharacters"
-            android:maxLength="10" />
+            android:maxLength="32" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/set_message_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/set_message"
+        app:icon="@drawable/message"
+        app:iconGravity="end" />
 
     <Space
         android:layout_width="match_parent"

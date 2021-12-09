@@ -6,6 +6,7 @@
     <string name="display_mode">Display Mode:</string>
     <string name="set_clock">Set Clock</string>
     <string name="set_alarm">Set Alarm</string>
+    <string name="set_message">Set Message</string>
     <string name="custom_text">Text</string>
     <string name="custom_text_prompt">Custom Text:</string>
 

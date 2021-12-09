@@ -33,10 +33,10 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener 
         }
 
         if (MainActivity.setClock) {
-            (activity as MainActivity)?.publish("t/time", "$hourFmt:$minuteFmt:00")
+            (activity as MainActivity).publish("t/time", "$hourFmt:$minuteFmt:00")
         }
         else {
-            (activity as MainActivity)?.publish("t/alarm", "$hourFmt:$minuteFmt:00")
+            (activity as MainActivity).publish("t/alarm", "$hourFmt:$minuteFmt:00")
         }
     }
 }
