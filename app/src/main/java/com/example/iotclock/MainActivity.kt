@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var setAlarmButton: Button
     private lateinit var setMessageButton: Button
     private lateinit var messageEntry: EditText
+    private lateinit var temperatureDisplay: TextView
 
     companion object {
         var customTime = false
@@ -76,6 +77,8 @@ class MainActivity : AppCompatActivity() {
             setClock = false
             TimePickerFragment().show(supportFragmentManager, "timePicker")
         }
+
+        temperatureDisplay = findViewById(R.id.temperature_display)
     }
 
     private fun connect() {
@@ -84,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         client.setCallback(object : MqttCallback {
             override fun messageArrived(topic: String?, message: MqttMessage?) {
                 Log.d(CLIENT_ID, "Receive message: ${message.toString()} from topic: $topic")
+                temperatureDisplay.text = "${message.toString()}°F"
             }
 
             override fun connectionLost(cause: Throwable?) {
@@ -101,6 +105,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(asyncActionToken: IMqttToken?) {
                     Log.d(CLIENT_ID, "Connected!")
                     makeToast("Connected!")
+                    client.subscribe("t/temperature", 0)
                 }
 
                 override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {

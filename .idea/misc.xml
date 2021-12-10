@@ -7,10 +7,11 @@
         <entry key="..\:/Users/Wes/AndroidStudioProjects/IoTClock_Test/app/src/main/res/layout/activity_main.xml" value="0.3609375" />
         <entry key="..\:/Users/wesley.beard/AndroidStudioProjects/IoTClock/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/wesley.beard/AndroidStudioProjects/IoTClock/app/src/main/res/layout/fragment_time_picker.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/wesley.beard/AndroidStudioProjects/SmartClock/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

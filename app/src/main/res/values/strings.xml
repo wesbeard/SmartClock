@@ -9,6 +9,8 @@
     <string name="set_message">Set Message</string>
     <string name="custom_text">Text</string>
     <string name="custom_text_prompt">Custom Text:</string>
+    <string name="temperature_label">Temperature:</string>
+    <string name="temperature_placeholder">\??°F</string>
 
     <string-array name="display_mode_array">
         <item>Ambient Temperature</item>
