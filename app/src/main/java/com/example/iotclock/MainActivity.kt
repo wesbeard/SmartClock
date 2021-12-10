@@ -120,7 +120,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun publish(topic: String, data: String) {
-        if (!client.isConnected) connect()
         try {
             val message = MqttMessage(data.toByteArray())
             client.publish(topic, message)
